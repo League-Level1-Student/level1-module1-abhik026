@@ -8,8 +8,20 @@ package _01_race_car;
 
 public class RaceCarRunner {
 	public static void main(String[] args) {
-		/* Do the following things without changing the RaceCar class */
+		RaceCar rob = new RaceCar("Corvette",5);
+		int place = rob.getPositionInRace();
+		System.out.println(place);
+		rob.crash();
+		if(rob.isDamaged()) {
+			rob.pit();
+		}
 		
+		for(int i =0; i<1;) {	
+		rob.overtake();
+		if(place==1) {
+			System.exit(0);;
+		}
+		}
 		// 1. Create a RaceCar and place it in 5th position
 	
 		// 2. Print the RaceCar's position in the race
